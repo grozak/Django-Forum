@@ -1,4 +1,5 @@
 # Django-Forum
+ localhost:8000/forum
 
 ### Działa:
 * rejestracja
