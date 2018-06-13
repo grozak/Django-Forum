@@ -1,0 +1,29 @@
+{% extends "forum/base.html" %}
+    {% block content %}
+        {% if thread %}
+            <div class="section">
+                <p class="sectiontitle">{{ thread.thread_title }}</p>
+            </div>
+            {% for post in posts %}
+                <div class="post">
+                    <div class="postauthor"> <center><p>{{ post.author.get_username }}</p></center> </div>
+                    <div class="postcontent"><p><span style="font-size:12px">{{ post.time }}</span><pre>{{ post.content }}</pre></p></div>
+                    <div class="clear"></div>
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+            <h2>Nie ma żadnych tematów do wyświetlenia.</h2>
+        {% endif %}
+
+        {% if user.get_username %}
+            <center>
+            <form method="post">
+                Odpowiedz: <br>
+                <textarea id="textarea" cols="40" rows="10" name="textarea" value="{{ content }}"></textarea><br>
+                <input type="submit" value="OK">
+            </form>
+            </center>
+        {% endif %}
+{% endblock content %}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Forum</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'forum/style.css' %}" />
+</head>
+<body>
+ <main>
+        <center><h1><a href="/forum/"> Django Forum</a></h1></center>
+     {% block content %}{% endblock content %}
+ </main>
+</body>
+</html>

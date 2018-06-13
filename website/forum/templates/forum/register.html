@@ -1,0 +1,11 @@
+{% extends "forum/base.html" %}
+    {% block content %}
+        <div id="register">
+            <h2>Sign up</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+{% endblock content %}

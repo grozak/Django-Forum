@@ -1,0 +1,108 @@
+
+
+main {
+    margin: 10px auto;
+    width:800px;
+    padding: 20px;
+    min-height: 600px;
+    background-color:rgb(230,230,230);
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+h1 {
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    color: black;
+    text-decoration: none;
+}
+
+h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+.section {
+    width:840px;
+    margin-left:-20px;
+    background-color:green;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+.sectiontitle {
+    color:black;
+    margin:0px 20px;
+    font-size: 24px;
+}
+.desc {
+    color:black;
+    margin:0px 20px;
+    font-size: 14px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    background-color: #79abfc;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #3582ff;
+    color: white;
+}
+.post {
+    margin:10px;
+    width:800px;
+    min-height:150px;
+    clear:both;
+}
+.postauthor {
+    width:180px;
+    height:40px;
+    float:left;
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 5px;
+}
+.postauthor p{
+    font-size: 20px;
+    margin-top:0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+
+}
+
+.postcontent {
+    padding:10px;
+    float:right;
+    width:580px;
+    min-height: 150px;
+    border-radius: 25px;
+    background: #9cdd3e;
+}
+
+.postcontent p {
+    margin-top:0;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 14px;
+}
+
+.clear {
+    clear:both;
+}
+
+#register p {
+    font-size:14px;
+}

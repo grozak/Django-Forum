@@ -1,0 +1,35 @@
+{% extends "forum/base.html" %}
+    {% block content %}
+        {% if not user.get_username %}
+         <form>
+            <input type="button", value="Zaloguj się" onclick="window.location.href='login'">
+            <input type="button", value="Zarejestruj się" onclick="window.location.href='register'">
+        </form>
+        {% else %}
+            <p style="margin-top:0">
+                Jesteś zalogowany jako: {{ user.get_username }}
+             <input type="button", value="Wyloguj się" onclick="window.location.href='logout'">
+            </p>
+
+        {% endif %}
+
+        {% if sections %}
+
+            {% for section in sections %}
+                <div class="section">
+                    <p class="sectiontitle">{{ section.section_title }}</p>
+                    <p class="desc">{{ section.description }}</p>
+                </div>
+                {% for thread in threads %}
+                    <ul>
+                    {% if thread.section == section %}
+                        <li><a href="/forum/{{ thread.id }}">{{ thread.thread_title }}<span style="float:right; font-size:14px">Autor: {{ thread.author.get_username }}</span></a></li>
+                    {% endif %}
+                    </ul>
+                {% endfor %}
+            {% endfor %}
+
+        {% else %}
+            <h2>Nie ma żadnych sekcji do wyświetlenia.</h2>
+        {% endif %}
+{% endblock content %}
